@@ -16,6 +16,7 @@ namespace ProjektovanjeKuca
         SolidBrush boja;
         int x, y, lx, ly = 0;
         Item currItem;
+        Rectangle mRect;
 
         public enum Item
         {
@@ -57,13 +58,13 @@ namespace ProjektovanjeKuca
             lx = e.X;
             ly = e.X;
 
-            if (currItem == Item.Prostorija)
-            {
-                Graphics g = radnaPovrsina.CreateGraphics();
-                boja = new SolidBrush(Color.Black);
-                g.DrawRectangle(new Pen(Color.Black), x, y, e.X - x, e.Y - y);
-                g.Dispose();
-            }
+            //if (currItem == Item.Prostorija)
+            //{
+            //    Graphics g = radnaPovrsina.CreateGraphics();
+            //    boja = new SolidBrush(Color.Black);
+            //    g.DrawRectangle(new Pen(Color.Black), x, y, e.X - x, e.Y - y);
+            //    g.Dispose();
+            //}
         }
 
         private void radnaPovrsina_MouseDown(object sender, MouseEventArgs e)
@@ -71,19 +72,41 @@ namespace ProjektovanjeKuca
             crtanje = true;
             x = e.X;
             y = e.X;
+            mRect = new Rectangle(e.X, e.Y, 0, 0);
+            this.Invalidate();
 
-            
         }
 
         private void radnaPovrsina_MouseMove(object sender, MouseEventArgs e)
         {
             if (crtanje)
             {
-                //Graphics g = radnaPovrsina.CreateGraphics();
-                //boja = new SolidBrush(Color.Black);
-                //g.DrawRectangle(new Pen(Color.Black), x, y, e.X, e.Y);
-                //g.Dispose();
+                switch (currItem)
+                {
+                    case Item.Prostorija:
+                        //Graphics g = radnaPovrsina.CreateGraphics();
+                        //boja = new SolidBrush(Color.Black);
+                        //g.DrawRectangle(new Pen(Color.Black), x, y, e.X, e.Y);
+                        ////g.Dispose();
+                        //this.Invalidate();
+                        //break;
+                        this.Refresh();
+                        mRect = new Rectangle(mRect.Left, mRect.Top, e.X - mRect.Left, e.Y - mRect.Top);
+                        this.Invalidate();
+                        break;
+                }
             }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            //Draw a rectangle with 2pixel wide line
+            using (Pen pen = new Pen(Color.Red, 2))
+            {
+                Graphics g = radnaPovrsina.CreateGraphics();
+                g.DrawRectangle(pen, mRect);
+            }
+
         }
     }
 }
