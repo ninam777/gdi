@@ -1,0 +1,9 @@
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\bin\Debug\ProjektovanjeKuca.exe.config
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\bin\Debug\ProjektovanjeKuca.exe
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\bin\Debug\ProjektovanjeKuca.pdb
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.csprojResolveAssemblyReference.cache
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.Form1.resources
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.Properties.Resources.resources
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.csproj.GenerateResource.Cache
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.exe
+c:\users\nina777\documents\visual studio 2015\Projects\ProjektovanjeKuca\ProjektovanjeKuca\obj\Debug\ProjektovanjeKuca.pdb
